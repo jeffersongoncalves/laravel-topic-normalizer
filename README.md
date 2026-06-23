@@ -32,7 +32,23 @@ $topics = TopicNormalizer::normalize(
 // => ['laravel', 'filament', 'php-package', …]  (slugged, unique, max 20)
 ```
 
-Pass any number of lists. Non-strings are skipped; values are `Str::slug()`-ed, empties and over-long slugs dropped, duplicates removed, and the result capped.
+Pass any number of lists. Non-strings are skipped; values are `Str::slug()`-ed, empties and out-of-range slugs dropped, duplicates removed (first occurrence wins, order preserved), and the result capped.
+
+### Per-call overrides
+
+The config defaults can be overridden per call with named arguments (each falls back to its config value):
+
+```php
+$topics = TopicNormalizer::normalize(
+    $repo['topics'] ?? [],
+    $composer['keywords'] ?? [],
+    max: 10,        // cap this call at 10
+    maxLength: 30,  // drop slugs longer than 30 chars
+    minLength: 2,   // drop single-character noise
+);
+```
+
+`max_length` / `min_length` are accepted as snake_case aliases. A `max` of `0` (or less) returns an empty list.
 
 ## Configuration
 
@@ -42,8 +58,9 @@ php artisan vendor:publish --tag="topic-normalizer-config"
 
 | Key | Default | Description |
 | --- | --- | --- |
-| `max` | `20` | Maximum number of topics returned. |
+| `max` | `20` | Maximum number of topics returned (`0` or less returns nothing). |
 | `max_length` | `50` | Slugs longer than this are dropped as junk. |
+| `min_length` | `0` | Slugs shorter than this are dropped as junk (`0` disables the check). |
 
 ## Testing
 
