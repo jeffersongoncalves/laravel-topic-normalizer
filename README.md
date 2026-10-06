@@ -1,6 +1,6 @@
 <div class="filament-hidden">
 
-![Laravel Topic Normalizer](https://raw.githubusercontent.com/jeffersongoncalves/laravel-topic-normalizer/master/art/jeffersongoncalves-laravel-topic-normalizer.png)
+![Laravel Topic Normalizer](https://raw.githubusercontent.com/jeffersongoncalves/laravel-topic-normalizer/main/art/jeffersongoncalves-laravel-topic-normalizer.png)
 
 </div>
 
@@ -9,8 +9,8 @@
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-FFDD00?style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jeffersongoncalves)
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jeffersongoncalves/laravel-topic-normalizer.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/laravel-topic-normalizer)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/laravel-topic-normalizer/tests.yml?branch=master&label=tests&style=flat-square)](https://github.com/jeffersongoncalves/laravel-topic-normalizer/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/laravel-topic-normalizer/fix-php-code-style-issues.yml?branch=master&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/laravel-topic-normalizer/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amaster)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/laravel-topic-normalizer/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/jeffersongoncalves/laravel-topic-normalizer/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/laravel-topic-normalizer/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/laravel-topic-normalizer/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/jeffersongoncalves/laravel-topic-normalizer.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/laravel-topic-normalizer)
 
 Merge raw topic / keyword lists from several sources — GitHub topics, `composer.json` + `package.json` keywords, Packagist keywords — into one clean list: slugged, deduplicated, length-filtered and capped.
